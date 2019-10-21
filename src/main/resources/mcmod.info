@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dm",
+  "name": "Dummy Mod",
+  "description": "Dummy Mod for CIIC 4010",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tophc7", "Angel Burgos"],
+  "credits": "Us",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
