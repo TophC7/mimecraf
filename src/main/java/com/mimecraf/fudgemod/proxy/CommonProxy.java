@@ -1,4 +1,4 @@
-package com.mimecraf.dummymod.proxy;
+package com.mimecraf.fudgemod.proxy;
 
 import net.minecraft.item.Item;
 

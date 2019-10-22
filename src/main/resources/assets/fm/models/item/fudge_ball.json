@@ -1,6 +1,6 @@
 {
    "parent": "item/generated",
    "textures": {
-       "layer0": "tm:items/dummy"
+       "layer0": "fm:items/fudge_ball"
    }
 }

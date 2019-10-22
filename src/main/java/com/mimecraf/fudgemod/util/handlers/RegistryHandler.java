@@ -1,7 +1,7 @@
-package com.mimecraf.dummymod.util.handlers;
+package com.mimecraf.fudgemod.util.handlers;
 
-import com.mimecraf.dummymod.init.ModItems;
-import com.mimecraf.dummymod.util.IHasModel;
+import com.mimecraf.fudgemod.init.ModItems;
+import com.mimecraf.fudgemod.util.IHasModel;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;

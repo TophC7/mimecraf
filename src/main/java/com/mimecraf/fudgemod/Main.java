@@ -1,7 +1,7 @@
-package com.mimecraf.dummymod;
+package com.mimecraf.fudgemod;
 
-import com.mimecraf.dummymod.proxy.CommonProxy;
-import com.mimecraf.dummymod.util.Reference;
+import com.mimecraf.fudgemod.proxy.CommonProxy;
+import com.mimecraf.fudgemod.util.Reference;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
