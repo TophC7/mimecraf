@@ -4,16 +4,15 @@ import com.mimecraf.fudgemod.Main;
 import com.mimecraf.fudgemod.init.ModItems;
 import com.mimecraf.fudgemod.util.IHasModel;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 
-public class ItemBase extends Item implements IHasModel {
+public class ItemFoodBase extends ItemFood implements IHasModel {
 
-    public ItemBase(String name, CreativeTabs tab){
+    public ItemFoodBase(String name, int amount, float Saturation, boolean forWolf){
+        super(amount, Saturation, forWolf);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
-        setCreativeTab(tab);
-
+        
         ModItems.ITEMS.add(this);
     }
 
