@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "xxx",
+        "xxx",
+        "xxx"
+    ],
+    "key":
+    {
+        "x":
+        {
+            "item": "fm:fudge_ball"
+        }
+    },
+    "result":
+    {
+        "item": "fm:fudge_block",
+        "count": 1
+    }
+}

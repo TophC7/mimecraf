@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "fm:fudge_block"
+        }
+    ],
+    "result":
+    {
+        "item": "fm:fudge_ball",
+        "count": 9
+    }
+}
