@@ -1,5 +1,6 @@
 package com.mimecraf.fudgemod;
 
+import com.mimecraf.fudgemod.init.ModRecipes;
 import com.mimecraf.fudgemod.proxy.CommonProxy;
 import com.mimecraf.fudgemod.util.Reference;
 import com.mimecraf.fudgemod.world.WorldGen;
@@ -32,6 +33,8 @@ public class Main {
     @EventHandler
     public static void init(FMLInitializationEvent event){
         
+        ModRecipes.init();
+
     }
 
     @EventHandler
