@@ -10,6 +10,7 @@ public class ItemFoodBase extends ItemFood implements IHasModel {
 
     public ItemFoodBase(String name, int amount, float Saturation, boolean forWolf){
         super(amount, Saturation, forWolf);
+        
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
         

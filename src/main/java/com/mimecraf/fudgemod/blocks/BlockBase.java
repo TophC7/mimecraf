@@ -13,8 +13,8 @@ import net.minecraft.item.ItemBlock;
 
 public class BlockBase extends Block implements IHasModel {
 
-    public BlockBase(String name, Material materialIn, CreativeTabs tab) {
-        super(materialIn);
+    public BlockBase(String name, Material material, CreativeTabs tab) {
+        super(material);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
         setCreativeTab(tab);
@@ -28,6 +28,5 @@ public class BlockBase extends Block implements IHasModel {
         Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 
     }
-
     
 }
