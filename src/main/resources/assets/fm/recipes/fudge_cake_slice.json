@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "  m",
+        " me",
+        "xwx"
+    ],
+    "key":
+    {
+        "m":
+        {
+            "item": "minecraft:milk_bucket"
+        },
+        "e":
+        {
+            "item": "minecraft:egg"
+        },
+        "w":
+        {
+            "item": "minecraft:wheat"
+        },
+        "x":
+        {
+            "item": "fm:fudge_ball"
+        }
+    },
+    "result":
+    {
+        "item": "fm:fudge_cake_slice",
+        "count": 2
+    }
+}

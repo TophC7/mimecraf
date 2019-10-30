@@ -2,6 +2,7 @@ package com.mimecraf.fudgemod.blocks;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class FudgeBlock extends BlockBase {
@@ -14,6 +15,12 @@ public class FudgeBlock extends BlockBase {
         setHarvestLevel("sword", 1);
         setResistance(0.0f);
 
+    }
+
+    @Override
+    public boolean isStickyBlock(IBlockState state) {
+
+        return true;
     }
 
 }

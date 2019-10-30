@@ -1,3 +1,7 @@
+//items
 item.fm:fudge_ball.name=Fudge Ball
+item.fm:fudge_cake_slice.name=Fudge Cake Slice
+
+//blocks
 tile.fm:fudge_block.name=Fudge Block
 tile.fm:fudge_ore.name=Fudge Ore
