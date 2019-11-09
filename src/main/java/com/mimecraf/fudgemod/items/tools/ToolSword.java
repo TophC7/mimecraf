@@ -1,16 +1,16 @@
-package com.mimecraf.fudgemod.tools;
+package com.mimecraf.fudgemod.items.tools;
 
 import com.mimecraf.fudgemod.Main;
 import com.mimecraf.fudgemod.init.ModItems;
 import com.mimecraf.fudgemod.util.IHasModel;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemAxe; 
+import net.minecraft.item.ItemSword;
 
-public class ToolAxe extends ItemAxe implements IHasModel {
+public class ToolSword extends ItemSword implements IHasModel {
 
-    public ToolAxe(String name,ToolMaterial material) {
-        super(material, 6.0f, -3.2f);
+    public ToolSword(String name,ToolMaterial material) {
+        super(material);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
         setCreativeTab(CreativeTabs.COMBAT);

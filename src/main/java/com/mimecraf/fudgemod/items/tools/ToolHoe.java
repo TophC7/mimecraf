@@ -1,15 +1,15 @@
-package com.mimecraf.fudgemod.tools;
+package com.mimecraf.fudgemod.items.tools;
 
 import com.mimecraf.fudgemod.Main;
 import com.mimecraf.fudgemod.init.ModItems;
 import com.mimecraf.fudgemod.util.IHasModel;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemHoe;
 
-public class ToolPickaxe extends ItemPickaxe implements IHasModel {
+public class ToolHoe extends ItemHoe implements IHasModel {
 
-    public ToolPickaxe(String name,ToolMaterial material) {
+    public ToolHoe(String name,ToolMaterial material) {
         super(material);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());

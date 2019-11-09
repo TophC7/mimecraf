@@ -12,3 +12,9 @@ item.fm:fudge_cake_slice.name=Fudge Cake Slice
 //blocks
 tile.fm:fudge_block.name=Fudge Block
 tile.fm:fudge_ore.name=Fudge Ore
+
+//armor
+item.fm:fudge_helmet.name=Fudge Helmet
+item.fm:fudge_chestplate.name=Fudge Chestplate
+item.fm:fudge_leggings.name=Fudge Pants
+item.fm:fudge_boots.name=Fudge Boots
