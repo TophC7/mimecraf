@@ -13,7 +13,7 @@ public class ToolHoe extends ItemHoe implements IHasModel {
         super(material);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
-        setCreativeTab(CreativeTabs.COMBAT);
+        setCreativeTab(CreativeTabs.TOOLS);
 
         ModItems.ITEMS.add(this);
     }
