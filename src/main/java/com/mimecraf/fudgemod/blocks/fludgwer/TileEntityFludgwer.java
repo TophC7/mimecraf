@@ -5,7 +5,9 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityFludgwer extends TileEntity{
 
-    private int count;
+	private int count;
+	public long lastChangeTime;
+
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
@@ -15,10 +17,23 @@ public class TileEntityFludgwer extends TileEntity{
 	
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
+		// lastChangeTime = compound.getLong("lastChangeTime");
 		count = compound.getInteger("count");
 		super.readFromNBT(compound);
-	}
-	
+	 }
+
+	// public ItemStackHandler inventory = new ItemStackHandler(1) {
+	// @Override 
+	// public void  onContentsChanged(int slot)
+	// 	{
+	// 		if (!world.isRemote)
+	// 		{
+	// 			lastChangeTime = world.getWorldTime();
+
+	// 		}
+	// 	}
+	// };
+
 	public int getCount() {
 		return count;
 	}

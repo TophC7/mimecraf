@@ -6,6 +6,7 @@ import java.util.List;
 //import com.mimecraf.fudgemod.items.ItemBase;
 import com.mimecraf.fudgemod.items.ItemFoodBase;
 import com.mimecraf.fudgemod.items.armor.ArmorBase;
+import com.mimecraf.fudgemod.items.tools.ManaSword;
 import com.mimecraf.fudgemod.items.tools.ToolAxe;
 import com.mimecraf.fudgemod.items.tools.ToolHoe;
 import com.mimecraf.fudgemod.items.tools.ToolPickaxe;
@@ -45,15 +46,13 @@ public class ModItems {
     public static final ItemSpade FUDGE_SHOVEL = new ToolShovel("fudge_shovel", FUDGE_MATERIAL);
     public static final ItemAxe FUDGE_AXE = new ToolAxe("fudge_axe", FUDGE_MATERIAL);
     public static final ItemPickaxe FUDGE_PICKAXE = new ToolPickaxe("fudge_Pickaxe", FUDGE_MATERIAL);
+    public static final ManaSword MANA_SWORD = new ManaSword("Mana_sword", FUDGE_MATERIAL);
 
     //Armor
     public static final Item FUDGE_HELMET = new  ArmorBase("fudge_helmet", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.HEAD);
     public static final Item FUDGE_CHESTPLATE = new ArmorBase("fudge_chestplate", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.CHEST);
     public static final Item FUDGE_LEGGINGS = new ArmorBase("fudge_leggings", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.LEGS);
     public static final Item FUDGE_BOOTS = new ArmorBase("fudge_boots", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.FEET);
-
-
-
 
 
 
