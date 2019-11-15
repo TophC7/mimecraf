@@ -5,46 +5,49 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityFludgwer extends TileEntity{
 
-	private int count;
-	public long lastChangeTime;
-
+	public int MAX_MANA = 1000;
+	private int mana = 0; 
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-		compound.setInteger("count", count);
+		compound.setInteger("mana", mana);
 		return super.writeToNBT(compound);
 	}
 	
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
-		// lastChangeTime = compound.getLong("lastChangeTime");
-		count = compound.getInteger("count");
+		mana = compound.getInteger("mana");
 		super.readFromNBT(compound);
-	 }
+	}
 
-	// public ItemStackHandler inventory = new ItemStackHandler(1) {
-	// @Override 
-	// public void  onContentsChanged(int slot)
-	// 	{
-	// 		if (!world.isRemote)
-	// 		{
-	// 			lastChangeTime = world.getWorldTime();
-
-	// 		}
-	// 	}
-	// };
-
-	public int getCount() {
-		return count;
+	public int getMana() {
+		return mana;
 	}
 	
-	public void incrementCount() {
-		count++;
+	public void incrementMana() {
+		mana++;
 		markDirty();
 	}
 	
-	public void decrementCount() {
-		count--;
+	public void decrementMana() {
+		mana--;
+		markDirty();
+	}
+
+	public void incrementMana(int amount) {
+		
+		if (mana + amount >= MAX_MANA) {
+			mana = MAX_MANA;
+
+		} else if (mana <= MAX_MANA - amount) {
+			mana += amount;
+		} 
+				
+		markDirty();
+	}
+
+	public void decrementMana(int amount) {
+		mana -= amount;
 		markDirty();
 	}
 
