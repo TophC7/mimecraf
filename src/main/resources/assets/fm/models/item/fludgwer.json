@@ -1,0 +1,6 @@
+{
+   "parent": "item/generator",
+   "textures": {
+      "layer0" : "fm:blocks/fludgwer"
+   }
+}
