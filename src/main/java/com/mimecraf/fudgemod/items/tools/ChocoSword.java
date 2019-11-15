@@ -14,11 +14,11 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class ManaSword extends ItemSword implements IHasModel {
-    
-    public final int MAX_MANA = 100;
+public class ChocoSword extends ItemSword implements IHasModel {
 
-    public ManaSword(String name,ToolMaterial material) {
+    public final int MAX_CHOCO = 100;
+
+    public ChocoSword(String name, ToolMaterial material) {
         super(material);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
@@ -29,7 +29,7 @@ public class ManaSword extends ItemSword implements IHasModel {
 
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(1, TextFormatting.AQUA + "Mana: " + TextFormatting.RESET + getMana(stack));
+        tooltip.add(1, TextFormatting.DARK_RED + "Choco: " + TextFormatting.RESET + getChoco(stack));
     }
 
     @Override
@@ -37,23 +37,23 @@ public class ManaSword extends ItemSword implements IHasModel {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
     }
         
-    public void incrementMana(ItemStack stack) {
+    public void incrementChoco(ItemStack stack) {
         NBTTagCompound tag = stack.getOrCreateSubCompound("fm");
-        int mana = tag.getInteger("mana");
-        tag.setInteger("mana", mana + 1);
+        int choco = tag.getInteger("choco");
+        tag.setInteger("choco", choco + 1);
     }
 	
-	public void decrementMana(ItemStack stack) {
+	public void decrementChoco(ItemStack stack) {
         NBTTagCompound tag = stack.getOrCreateSubCompound("fm");
-        int mana = tag.getInteger("mana");
-        tag.setInteger("mana", mana - 1);
+        int choco = tag.getInteger("choco");
+        tag.setInteger("choco", choco - 1);
     }
 
 
-	public int getMana(ItemStack stack) {
+	public int getChoco(ItemStack stack) {
         NBTTagCompound tag = stack.getOrCreateSubCompound("fm");
-        int mana = tag.getInteger("mana");
-        return mana;
+        int choco = tag.getInteger("choco");
+        return choco;
 	}
 
 }

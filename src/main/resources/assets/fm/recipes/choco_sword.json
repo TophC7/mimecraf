@@ -1,22 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X",
-    "D",
+    "F",
+    "F",
     "#"
   ],
   "key": {
     "#": {
       "item": "minecraft:stick"
     },
-    "D": {
-      "item": "minecraft:diamond"
-    },
-    "X": {
-      "item": "fm:fudge_ball"
+    "F": {
+      "item": "fm:fortified_fudge_ball"
     }
   },
   "result": {
-    "item": "fm:mana_sword"
+    "item": "fm:choco_sword"
   }
 }

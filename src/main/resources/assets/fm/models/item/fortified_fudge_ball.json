@@ -1,6 +1,6 @@
 {
    "parent": "item/generated",
    "textures": {
-      "layer0" : "fm:blocks/fludgwer"
+       "layer0": "fm:items/fortified_fudge_ball"
    }
 }

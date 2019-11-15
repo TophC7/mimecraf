@@ -1,8 +1,9 @@
 package com.mimecraf.fudgemod.blocks.fludgwer;
 
-import com.mimecraf.fudgemod.blocks.BlockTileEntity;
+import com.mimecraf.fudgemod.blocks.BushTileEntity;
+import com.mimecraf.fudgemod.init.ModBlocks;
 import com.mimecraf.fudgemod.init.ModItems;
-import com.mimecraf.fudgemod.items.tools.ManaSword;
+import com.mimecraf.fudgemod.items.tools.ChocoSword;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -19,11 +20,9 @@ import net.minecraft.world.World;
 /**
  * BlockFludgwer
  */
-public class BlockFludgwer extends BlockTileEntity<TileEntityFludgwer> {
+public class BushFludgwer extends BushTileEntity<TileEntityFludgwer> {
 
-    // public final int MAX_MANA = 1000;
-
-    public BlockFludgwer(String name, Material material, CreativeTabs tab) {
+    public BushFludgwer(String name, Material material, CreativeTabs tab) {
         super(name, material, tab);
     }
 
@@ -33,8 +32,8 @@ public class BlockFludgwer extends BlockTileEntity<TileEntityFludgwer> {
 
             //temp vars for easy use
             TileEntityFludgwer tile = getTileEntity(world, pos);
-            ManaSword Mana_Sword = ModItems.MANA_SWORD;
-            ItemStack Held_Item = player.getHeldItemMainhand();
+            ChocoSword chocoSword = ModItems.CHOCO_SWORD;
+            ItemStack heldItem = player.getHeldItemMainhand();
 
             BlockPos directions [] = {
                 pos.north(),
@@ -47,38 +46,36 @@ public class BlockFludgwer extends BlockTileEntity<TileEntityFludgwer> {
                 pos.south().east()
             };
 
-            if (tile.getMana() < tile.MAX_MANA && Held_Item.isEmpty()) {
+            if (tile.getChoco() < tile.MAX_CHOCO && heldItem.isEmpty()) {
                 for (BlockPos blockPos : directions) {
-
                     net.minecraft.block.Block tempBlock = world.getBlockState(blockPos).getBlock();
 
-                    if (tempBlock.equals(Blocks.COAL_BLOCK) && tile.getMana() < tile.MAX_MANA) {
-                        
-                        tile.incrementMana(100);
+                    if ((tempBlock.equals(Blocks.COAL_BLOCK) || tempBlock.equals(ModBlocks.FUDGE_BLOCK)) && tile.getChoco() < tile.MAX_CHOCO) {
+                        tile.incrementChoco(100);
                         world.setBlockState(blockPos, Blocks.FIRE.getDefaultState(), 2);
 
                     }                    
                 }
 
-                player.sendStatusMessage(new TextComponentString("Available Mana: " + tile.getMana()), false);
+                player.sendStatusMessage(new TextComponentString("Available Choco: " + tile.getChoco()), false);
 
-            } else if (Held_Item.isEmpty()) {
-                player.sendStatusMessage(new TextComponentString("Available Mana: " + tile.getMana()), false);
+            } else if (heldItem.isEmpty()) {
+                player.sendStatusMessage(new TextComponentString("Available Choco: " + tile.getChoco()), false);
                 
             }
 
-            if (tile.getMana() > 0 && Mana_Sword.getMana(Held_Item) < Mana_Sword.MAX_MANA && Held_Item.getItem().equals(ModItems.MANA_SWORD)) {
-                
-                tile.decrementMana();
-                Mana_Sword.incrementMana(Held_Item);
+            if (tile.getChoco() > 0 && chocoSword.getChoco(heldItem) < chocoSword.MAX_CHOCO && heldItem.getItem().equals(ModItems.CHOCO_SWORD)) {
+                tile.decrementChoco();
+                chocoSword.incrementChoco(heldItem);
+                player.sendStatusMessage(new TextComponentString("Available Choco: " + tile.getChoco()), false);
 
-                player.sendStatusMessage(new TextComponentString("Available Mana: " + tile.getMana()), false);
+            } else if (chocoSword.getChoco(heldItem) == chocoSword.MAX_CHOCO) {
+                player.sendStatusMessage(new TextComponentString("Sword maxed out"), false);
 
-            } else if (tile.getMana() == 0 && Held_Item.getItem().equals(ModItems.MANA_SWORD)) {
+            } else if (tile.getChoco() == 0 && heldItem.getItem().equals(ModItems.CHOCO_SWORD)) {
+                player.sendStatusMessage(new TextComponentString("No Choco"), false);
 
-                player.sendStatusMessage(new TextComponentString("No Mana"), false);
-
-            }
+            } 
         }
         
         return true;
