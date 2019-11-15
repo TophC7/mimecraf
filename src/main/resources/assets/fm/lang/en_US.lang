@@ -5,8 +5,9 @@ item.fm:fudge_hoe.name=Fudge Hoe
 item.fm:fudge_shovel.name=Fudge Shovel
 item.fm:fudge_pickaxe.name=Fudge Pickaxe
 item.fm:fudge_sword.name=Fudge Sword
+item.fm:mana_sword.name=Mana Sword
 
-
+//food
 item.fm:fudge_cake_slice.name=Fudge Cake Slice
 
 //blocks
