@@ -7,11 +7,15 @@ import com.mimecraf.fudgemod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
-
+/**
+ * ArmorBase
+ * 
+ * Simply a base class for mod's costume armors
+ */
 public class ArmorBase extends ItemArmor implements IHasModel {
 
-    public ArmorBase(String name, ArmorMaterial materiaalIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-        super(materiaalIn, renderIndexIn, equipmentSlotIn);
+    public ArmorBase(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+        super(materialIn, renderIndexIn, equipmentSlotIn);
         setRegistryName(name);
         setUnlocalizedName(this.getRegistryName().toString());
         setCreativeTab(CreativeTabs.COMBAT);
@@ -19,9 +23,11 @@ public class ArmorBase extends ItemArmor implements IHasModel {
         ModItems.ITEMS.add(this);
 
     }
+
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
+        
     }
 
 }

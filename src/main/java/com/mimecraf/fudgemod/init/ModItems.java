@@ -3,7 +3,6 @@ package com.mimecraf.fudgemod.init;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.mimecraf.fudgemod.items.ItemBase;
 import com.mimecraf.fudgemod.items.ItemFoodBase;
 import com.mimecraf.fudgemod.items.armor.ArmorBase;
 import com.mimecraf.fudgemod.items.tools.ChocoSword;
@@ -26,6 +25,12 @@ import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
+/**
+ * ModItems /
+ * 
+ * Holds all the mod's custom items.
+ * And a list to hold them.
+ */
 public class ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<Item> ();
@@ -53,7 +58,5 @@ public class ModItems {
     public static final Item FUDGE_CHESTPLATE = new ArmorBase("fudge_chestplate", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.CHEST);
     public static final Item FUDGE_LEGGINGS = new ArmorBase("fudge_leggings", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.LEGS);
     public static final Item FUDGE_BOOTS = new ArmorBase("fudge_boots", FUDGE_ARMOR_MATERIAL, 1, EntityEquipmentSlot.FEET);
-
-
 
 }

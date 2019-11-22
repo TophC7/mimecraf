@@ -1,5 +1,10 @@
 package com.mimecraf.fudgemod.util;
 
+/**
+ * Reference
+ * 
+ * Holds mod info
+ */
 public class Reference {
 
     public static final String MOD_ID = "fm";

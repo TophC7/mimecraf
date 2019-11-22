@@ -14,6 +14,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+/**
+ * Main
+ */
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 
@@ -25,21 +28,19 @@ public class Main {
 
     @EventHandler
     public static void preInit(FMLPreInitializationEvent event){
-
         GameRegistry.registerWorldGenerator(new WorldGen(), 3);
         
     }
     
     @EventHandler
     public static void init(FMLInitializationEvent event){
-        
         ModRecipes.init();
 
     }
 
     @EventHandler
     public static void postInit(FMLPostInitializationEvent event){
-        
+        //didnt need for our uses  
     }
     
 }

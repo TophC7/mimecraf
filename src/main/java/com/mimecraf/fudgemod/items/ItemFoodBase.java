@@ -6,6 +6,9 @@ import com.mimecraf.fudgemod.util.IHasModel;
 
 import net.minecraft.item.ItemFood;
 
+/**
+ * ItemFoodBase
+ */
 public class ItemFoodBase extends ItemFood implements IHasModel {
 
     public ItemFoodBase(String name, int amount, float Saturation, boolean forWolf){
@@ -15,11 +18,13 @@ public class ItemFoodBase extends ItemFood implements IHasModel {
         setUnlocalizedName(this.getRegistryName().toString());
         
         ModItems.ITEMS.add(this);
+        
     }
 
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
+
     }
 
 }

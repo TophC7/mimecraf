@@ -19,7 +19,10 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * BlockTileEntity
+ * BushTileEntity /
+ * 
+ * Ties togheter the bush block and the fludgwer tile entity.
+ * Sort of like a base class for both of them.
  */
 public abstract class BushTileEntity<TE extends TileEntity> extends BlockBush implements IHasModel{
 
@@ -31,18 +34,21 @@ public abstract class BushTileEntity<TE extends TileEntity> extends BlockBush im
 
         ModBlocks.BLOCKS.add(this);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+
     }
 
     public abstract Class<TE> getTileEntityClass();
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked") //ignores java warning for line 41
     public TE getTileEntity(IBlockAccess world, BlockPos pos){
         return (TE)world.getTileEntity(pos);
+
     }
 
     @Override
     public boolean hasTileEntity(IBlockState state) {
         return true;
+        
     }
 
     @Nullable

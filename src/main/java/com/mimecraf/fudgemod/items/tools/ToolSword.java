@@ -7,6 +7,9 @@ import com.mimecraf.fudgemod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
+/**
+ * ToolSword
+ */
 public class ToolSword extends ItemSword implements IHasModel {
 
     public ToolSword(String name,ToolMaterial material) {
@@ -16,11 +19,13 @@ public class ToolSword extends ItemSword implements IHasModel {
         setCreativeTab(CreativeTabs.COMBAT);
 
         ModItems.ITEMS.add(this);
+
     }
 
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
+        
     }
     
 }

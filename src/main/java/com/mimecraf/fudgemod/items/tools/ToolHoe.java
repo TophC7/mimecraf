@@ -7,6 +7,9 @@ import com.mimecraf.fudgemod.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemHoe;
 
+/**
+ * ToolHoe
+ */
 public class ToolHoe extends ItemHoe implements IHasModel {
 
     public ToolHoe(String name,ToolMaterial material) {
@@ -16,11 +19,13 @@ public class ToolHoe extends ItemHoe implements IHasModel {
         setCreativeTab(CreativeTabs.TOOLS);
 
         ModItems.ITEMS.add(this);
+
     }
 
     @Override
     public void registerModels() {
         Main.proxy.registerItemRenderer(this, 0, "inventory");
+        
     }
     
 }
